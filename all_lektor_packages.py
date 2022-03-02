@@ -8,6 +8,7 @@ from urllib.parse import (
 )
 from xmlrpc.client import ServerProxy
 
+from pkg_resources import find_distributions
 import requests
 from packaging.version import Version
 
@@ -88,12 +89,14 @@ def get_sdist(name, url):
 
 
 def get_wheel(name, version):
-    if not WHEELS_DIR.joinpath(name).is_dir():
-        WHEELS_DIR.mkdir(exist_ok=True)
-        subprocess.run(
-            ('pip', 'install', '--target', WHEELS_DIR, f'{name}=={version}'),
-            check=True,
-        )
+    for dist in find_distributions(WHEELS_DIR.__fspath__(), only=True):
+        if name.lower() == dist.key:
+            return
+    WHEELS_DIR.mkdir(exist_ok=True)
+    subprocess.run(
+        ('pip', 'install', '--target', WHEELS_DIR, f'{name}=={version}'),
+        check=True,
+    )
 
 
 def main():

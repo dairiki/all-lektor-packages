@@ -31,8 +31,6 @@ a wheel.)
 
 If any version of the distribution has already been downloaded,
 it will not be downloaded again (even if a newer version exists.)
-(Except, because it's hard not to, distributions that get installed
-in the `wheels` subdirectory are reinstalled on every run.)
 
 Here's how to run the script:
 

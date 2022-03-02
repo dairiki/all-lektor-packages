@@ -21,6 +21,7 @@ authors = ["Jeff Dairiki <dairiki@dairiki.org>"]
 python = "^3.9"
 packaging = "^21.3"
 requests = "^2.27.1"
+setuptools = "^60.9.3"
 
 [tool.poetry.dev-dependencies]
 
