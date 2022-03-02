@@ -4,10 +4,10 @@ This is a quickie throwaway script designed to download the source
 code for as many Lektor-related distributions — plugins and the like —
 as can be found.
 
-My motivation for hacking this together is to have generate a set
+My motivation for hacking this together is to generate a set
 of source code that I can grep for references to various bits of
 Lektor's API (documented and undocumented) in order to survey
-what bits are used by externally.
+what bits are used externally.
 
 Currently distributions of interest are located by searching
 PyPI for distributions which either have `lektor` in their name,
