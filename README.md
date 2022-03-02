@@ -10,8 +10,8 @@ Lektor's API (documented and undocumented) in order to survey
 what bits are used by externally.
 
 Currently distributions of interest are located by searching
-PyPI for distributions tagged with the `Framework :: Lektor`
-Trove classifier.
+PyPI for distributions which either have `lektor` in their name,
+or are tagged with the `Framework :: Lektor` Trove classifier.
 
 ## Usage
 
